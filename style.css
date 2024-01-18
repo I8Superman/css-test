@@ -1,0 +1,178 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;600;700&display=swap");
+
+/* Reset */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+/* --- VARAIBLES --- */
+
+/* Colors */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --yellow: #f8dd9f;
+}
+
+/* Fonts */
+:root {
+  /* headers */
+  --h-lg: 5rem/120% "DM Serif Display", sans-serif;
+  --h-m: 3.75rem/120% "DM Serif Display", sans-serif;
+  --h-sm: 2.175rem/120% "DM Serif Display", sans-serif;
+  /* sub headers */
+  --s-h: 600 1.5rem/120% "Poppins", sans-serif;
+  --s-h-sm: 700 1rem/120% "Poppins", sans-serif;
+  /* paragraph text */
+  --p: 400 1rem/120% "Poppins", sans-serif;
+  --p-lg: 400 1.125rem/120% "Poppins", sans-serif;
+  /* other */
+  /* how to capitalize? */
+  --nav-item: 400 1.125rem "Poppins", sans-serif;
+  --btn: 600 1.125rem "Poppins", sans-serif;
+}
+
+/* Spacing */
+:root {
+  /* side and top margins */
+  --x-lg: 11.25rem;
+  --lg: 5.625rem;
+  --m: 1.125rem;
+  /* 37,1 above large button */
+  /* 31,8 above normal button and after h1 */
+  /* margin bottom efter headers er ikke konsistent */
+
+  /* --sm:
+    --x-sm:
+    --xx-sm: */
+}
+
+/* PARAGRAPHS & TEXT */
+
+/* Headers and paragraphs */
+.h-lg {
+  font: var(--h-lg);
+}
+
+.h-m {
+  font: var(--h-m);
+}
+
+.h-sm {
+  font: var(--h-sm);
+}
+
+.s-h {
+  font: var(--s-h);
+}
+
+.s-h-sm {
+  font: var(--s-h-sm);
+}
+
+.p {
+  font: var(--p);
+}
+.p-lg {
+  font: var(--p-lg);
+}
+
+.nav-item {
+  font: var(--nav-item);
+}
+
+/* Text color and background color*/
+
+.wh {
+  color: var(--white);
+}
+
+.bg-wh {
+  background-color: var(--white);
+}
+
+.bl {
+  color: var(--black);
+}
+
+.bg-bl {
+  background-color: var(--black);
+}
+
+.ye {
+  color: var(--yellow);
+}
+
+.bg-ye {
+  background-color: var(--yellow);
+}
+
+/* LAYOUT */
+
+body {
+  background-image: url("./assets/images/topbillede.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(3px) brightness(120%);
+}
+
+.container {
+  padding: var(--x-lg);
+
+  &.footer {
+    padding: var(--lg) var(--x-lg) var(--lg) var(--x-lg);
+  }
+}
+
+/* Header */
+
+.header {
+  display: flex;
+
+  .main-menu {
+    display: flex;
+
+    .nav-item {
+      color: var(--white);
+    }
+  }
+}
+
+/* Main */
+
+/* Footer */
+
+/* Components */
+
+.btn {
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font: var(--btn);
+  text-transform: uppercase;
+}
