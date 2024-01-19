@@ -9,16 +9,16 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header bg-wh">
         <img src="./assets/images/rooster-logo.png" alt="rooster-logo" class="logo">
         <nav class="nav-menu main-menu">
-            <a class="nav-item" href="default.asp">Hjem</a>
+            <a class="nav-item" href="default.asp">Home</a>
             <a class="nav-item" href="news.asp">Ydelser</a>
             <a class="nav-item" href="contact.asp">Service</a>
             <a class="nav-item" href="about.asp">Om os</a>
             <a class="nav-item" href="about.asp">Kontakt</a>
         </nav>
-        <button id="this" class="btn wh bg-bl">Book et møde</button>
+        <button class="btn wh bg-bl">Book et møde</button>
     </header>
     <main class="content">
         <section class="top container">
@@ -27,7 +27,7 @@
                 <p class="p-lg">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
                     genuine commitment to
                     sustainability</p>
-                <button class="btn bl bg-wh">Book et møde</button>
+                <button class="btn-lg bl bg-wh">Book et møde</button>
             </article>
         </section>
         <section class="center bg-ye container">
@@ -58,14 +58,17 @@
                 <button class="btn wh bg-bl">Kontakt os</button>
             </article>
         </section>
-        <section class="multiple wh">
-            <div class="img-link ydelser">
+        <section class="multiple img-links wh">
+            <div class="col img-link ydelser">
+                <img src="./assets/images/ydelser.jpg" alt="">
                 <h1 class="h-lg">Ydelser</h1>
             </div>
-            <div class="img-link service">
+            <div class="col img-link service">
+                <img src="./assets/images/service.jpg" alt="">
                 <h1 class="h-lg">Service</h1>
             </div>
-            <div class="img-link kontakt">
+            <div class="col img-link kontakt">
+                <img src="./assets/images/kontaktos.jpg" alt="">
                 <h1 class="h-lg">Kontakt os</h1>
             </div>
         </section>
@@ -73,12 +76,8 @@
             <article class="section-text bl">
                 <h2 class="h-m">Modern refinement</h2>
                 <p class="p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og
-                    øvrige
-                    specialister skaber vi
-                    løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og
-                    samfund
-                    mere
-                    bæredygtige.</p>
+                    øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens
+                    muligheder og gør vores byer og samfund mere bæredygtige.</p>
                 <p class="p">Transforming Society Together.</p>
                 <button class="btn wh bg-bl">Kontakt os</button>
             </article>
@@ -92,7 +91,7 @@
                 <p class="p">If you have any questions, please contact us through this form.</p>
                 <p class="p">Please complete the following fields:</p>
             </article>
-            <form action="submit">
+            <form class="form" action="submit">
                 <input type="text" name="name" id="name" placeholder="Dit navn*" required>
                 <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required>
                 <input type="email" name="email" id="email" placeholder="Den email*">
@@ -101,55 +100,52 @@
             </form>
         </section>
     </main>
-    <footer class="footer">
-        <section class="container multiple footer bg-bl wh">
-            <article>
-                <div class="col">
-                    <h3 class="h-sm">Find os her</h3>
-                    <p class="p">Rooster Fried Chicken <br>
-                        Firmavej 109 <br>
-                        2300 Firmaby</p>
-                    <p class="p">Tlf.: +45 12 34 56 78 <br>
-                        Mail: info@roosterfried.dk</p>
-                    <h4 class="s-h-sm">Åbningstider</h4>
-                    <p class="p">Mandag – fredag: 10.00 – 17.30 <br>
-                        Lørdag: 10.00 – 15.00</p>
-                    <div class="social-links">
-                        <img src="./assets/icons/facebook-ikon-hvid.png" alt="facebook-icon-link">
-                        <img src="./assets/icons/instagram-ikon-hvid.png" alt="instagram-link-icon">
-                        <img src="./assets/icons/pinterest-ikon-hvid.png" alt="pinterest-icon-link">
-                        <img src="./assets/icons/linkedin-ikon-hvid.png" alt="linkedin-ikon-hvid">
-                    </div>
+    <footer>
+        <section class="multiple footer bg-bl wh">
+            <div class="col">
+                <h3 class="h-sm">Find os her</h3>
+                <p class="p">Rooster Fried Chicken <br>
+                    Firmavej 109 <br>
+                    2300 Firmaby</p>
+                <p class="p">Tlf.: +45 12 34 56 78 <br>
+                    Mail: info@roosterfried.dk</p>
+                <h4 class="s-h-sm">Åbningstider:</h4>
+                <p class="p">Mandag – fredag: 10.00 – 17.30 <br>
+                    Lørdag: 10.00 – 15.00</p>
+                <div class="social-links">
+                    <img src="./assets/icons/facebook-ikon-hvid.png" alt="facebook-icon-link">
+                    <img src="./assets/icons/instagram-ikon-hvid.png" alt="instagram-link-icon">
+                    <img src="./assets/icons/pinterest-ikon-hvid.png" alt="pinterest-icon-link">
+                    <img src="./assets/icons/linkedin-ikon-hvid.png" alt="linkedin-ikon-hvid">
                 </div>
-                <div class="col">
-                    <h3 class="h-sm">Information</h3>
-                    <p class="p">Om Rooster</p>
-                    <p class="p">Kataloger & film</p>
-                    <p class="p">Kundeguide</p>
-                    <p class="p">Opskrifter</p>
-                    <p class="p">Presse</p>
-                    <p class="p">Karriere</p>
-                </div>
-                <div class="col">
-                    <h3 class="h-sm">About</h3>
-                    <p class="p">About us</p>
-                    <p class="p">Careers</p>
-                    <p class="p">Terms of service</p>
-                    <p class="p">Refund policy</p>
-                    <p class="p">Help Center</p>
-                </div>
-                <div class="col">
-                    <h3 class="h-sm">Shop</h3>
-                    <p class="p">Juices</p>
-                    <p class="p">Supplements</p>
-                    <p class="p">Pantry</p>
-                    <p class="p">Locations</p>
-                    <p class="p">Order Ahead</p>
-                    <p class="p">Terms of service</p>
-                    <p class="p">Aloha</p>
-                </div>
-                </div>
-            </article>
+            </div>
+            <div class="col">
+                <h3 class="h-sm">Information</h3>
+                <p class="p link">Om Rooster</p>
+                <p class="p link">Kataloger & film</p>
+                <p class="p link">Kundeguide</p>
+                <p class="p link">Opskrifter</p>
+                <p class="p link">Presse</p>
+                <p class="p link">Karriere</p>
+            </div>
+            <div class="col">
+                <h3 class="h-sm">About</h3>
+                <p class="p link">About us</p>
+                <p class="p link">Careers</p>
+                <p class="p link">Terms of service</p>
+                <p class="p link">Refund policy</p>
+                <p class="p link">Help Center</p>
+            </div>
+            <div class="col">
+                <h3 class="h-sm">Shop</h3>
+                <p class="p link">Juices</p>
+                <p class="p link">Supplements</p>
+                <p class="p link">Pantry</p>
+                <p class="p link">Locations</p>
+                <p class="p link">Order Ahead</p>
+                <p class="p link">Terms of service</p>
+                <p class="p link">Aloha</p>
+            </div>
         </section>
     </footer>
 </body>
