@@ -10,18 +10,21 @@
 
 <body>
     <header class="header bg-wh">
-        <img src="./assets/images/rooster-logo.png" alt="rooster-logo" class="logo">
-        <nav class="nav-menu main-menu">
-            <a class="nav-item" href="default.asp">Home</a>
-            <a class="nav-item" href="news.asp">Ydelser</a>
-            <a class="nav-item" href="contact.asp">Service</a>
-            <a class="nav-item" href="about.asp">Om os</a>
-            <a class="nav-item" href="about.asp">Kontakt</a>
-        </nav>
-        <button class="btn wh bg-bl">Book et møde</button>
+        <div class="main-menu bg-wh">
+            <img class="logo" src="./assets/images/rooster-logo.png" alt="rooster-logo">
+            <nav class="nav-menu">
+                <a class="nav-item" href="default.asp">Home</a>
+                <a class="nav-item" href="news.asp">Ydelser</a>
+                <a class="nav-item" href="contact.asp">Service</a>
+                <a class="nav-item" href="about.asp">Om os</a>
+                <a class="nav-item" href="about.asp">Kontakt</a>
+            </nav>
+            <button class="btn wh bg-bl">Book et møde</button>
+            <!-- <img src="./assets/icons/burger-menu-ikon-sort.svg" class="burger-menu" alt=""> -->
+        </div>
     </header>
     <main class="content">
-        <section class="top container">
+        <section class="hero container">
             <article class="section-text wh">
                 <h1 class="h-lg">Making it right entirely in Copenhagen since 1997</h1>
                 <p class="p-lg">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
@@ -83,11 +86,12 @@
             </article>
             <img class="section-image" src="./assets/images/splitsektion-2.jpg" alt="kolibri">
         </section>
-        <section class="split bg-ye container">
+        <section class="split bg-ye container contact">
             <article class="section-text bl">
-                <h1 class="h-lg">Get in touch</h1>
+                <h2 class="h-m">Get in touch</h2>
                 <h4 class="s-h">We are here for you and we are here to serve!
-                    How can we help you?</h4>
+                    <br>How can we help you?
+                </h4>
                 <p class="p">If you have any questions, please contact us through this form.</p>
                 <p class="p">Please complete the following fields:</p>
             </article>
@@ -148,6 +152,7 @@
             </div>
         </section>
     </footer>
+    <script src="./script.js"></script>
 </body>
 
 </html>

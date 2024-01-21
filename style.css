@@ -1,6 +1,12 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
+/* Media quries 480px, 768px, 1024px, and 1280px*/
+/* @media screen and (max-width: 480px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 1024) {}
+@media screen and (max-width: 1280) {} */
+
 /* Reset */
 html {
   box-sizing: border-box;
@@ -63,9 +69,9 @@ li {
 /* Spacing */
 :root {
   /* side and top margins */
-  --xx-lg: 11.25rem;
-  --x-lg: 7.5rem;
-  --lg: 5.625rem;
+  --s-x-lg: 11.25rem;
+  --s-lg: 7.5rem;
+  --s-m: 5.625rem;
   --m-l: 1.125rem;
   --m: 1rem;
   --sm: 0.75rem;
@@ -157,25 +163,38 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  backdrop-filter: blur(1px) brightness(80%);
+  backdrop-filter: blur(1px) brightness(70%);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Header */
-
 .header {
-  /* position: sticky; */
+  position: sticky;
   top: 0;
   width: 100vw;
   max-width: 1500px;
   margin: 0 auto 0 auto;
-  height: var(--x-lg);
-  padding: 1rem var(--xx-lg) 1rem var(--xx-lg);
+  z-index: 1;
+}
+
+.main-menu {
+  height: 12vh;
+  min-height: 3.5rem;
+  padding: 0 var(--s-x-lg);
   display: flex;
   justify-content: space-between;
   gap: 10%;
   align-items: center;
+  transition: height 0.3s ease;
 
-  .main-menu {
+  .logo {
+    height: 100%;
+    padding: 1rem 0;
+    transition: padding 0.3s ease;
+  }
+
+  .nav-menu {
     flex: 1 1 auto;
     display: flex;
     justify-content: space-between;
@@ -184,6 +203,18 @@ body {
       color: var(--black);
     }
   }
+
+  &.shrink {
+    height: 6vh;
+
+    .logo {
+      padding: 0.5rem 0;
+    }
+  }
+
+  .burger-menu {
+    height: 2.3rem;
+  }
 }
 
 /* Main */
@@ -191,20 +222,22 @@ body {
   max-width: 1500px;
   margin: 0 auto 0 auto;
 }
+
 .container {
   padding: 11.25rem;
 
-  &.top {
-    min-height: 100vh;
-    min-height: 100svh;
+  &.hero {
+    height: 88vh;
     background-image: url("./assets/images/topbillede.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    .section-text h1 {
-      /* width: 70%; */
+    .section-text {
+      align-items: center;
     }
-
     .section-text p {
       width: 60%;
     }
@@ -233,15 +266,20 @@ body {
       align-items: flex-start;
     }
 
+    &.contact .section-text {
+      justify-content: flex-start;
+    }
+
     .section-image {
+      align-self: center;
       width: 100%;
     }
 
     & .section-text:first-child {
-      padding-right: 2rem;
+      padding-right: 10%;
     }
     & .section-text:last-child {
-      padding-left: 2rem;
+      padding-left: 10%;
     }
   }
 
@@ -272,13 +310,25 @@ body {
   & img {
     width: 100%;
     height: auto;
+    filter: blur(0px) saturate(100%);
+    transition: all 0.2s ease-in-out;
   }
 
   & h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:hover {
+    & img {
+      filter: blur(2px) saturate(0%);
+    }
+    & h1 {
+      transform: translate(-50%, -50%) scale(1.05);
+    }
   }
 }
 
@@ -289,7 +339,7 @@ footer {
   margin: 0 auto 0 auto;
 }
 .footer {
-  padding: var(--x-lg) var(--xx-lg) var(--x-lg) var(--xx-lg);
+  padding: var(--s-lg) var(--s-x-lg) var(--s-lg) var(--s-x-lg);
 }
 
 .social-links {
@@ -299,10 +349,11 @@ footer {
     width: 12%;
     margin-right: 0.25rem;
     border-radius: 0.25rem;
+    cursor: pointer;
   }
 }
 
-/* Components */
+/* COMPONENTS */
 
 .btn,
 .btn-lg {
@@ -312,6 +363,31 @@ footer {
   font: var(--btn);
   text-transform: uppercase;
   cursor: pointer;
+  white-space: nowrap;
+
+  &.bg-bl:hover {
+    background: linear-gradient(
+      110deg,
+      rgba(0, 0, 0, 1) 25%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(0, 0, 0, 1) 75%
+    );
+    background-position: right;
+    background-size: 400%;
+    animation: slidebg 0.5s 1;
+  }
+
+  &.bg-wh:hover {
+    background: linear-gradient(
+      110deg,
+      rgba(255, 255, 255, 1) 25%,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(255, 255, 255, 1) 75%
+    );
+    background-position: right;
+    background-size: 400%;
+    animation: slidebg 0.3s 1 ease-in-out;
+  }
 }
 
 .btn-lg {
@@ -337,5 +413,15 @@ footer {
 
   .btn {
     align-self: flex-end;
+  }
+}
+
+/* ANIMATIONS */
+
+/* Button */
+
+@keyframes slidebg {
+  to {
+    background-position: left;
   }
 }
