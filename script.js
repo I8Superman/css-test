@@ -1,5 +1,4 @@
-"use strict";
-
+const content = document.querySelector('.content');
 const menu = document.querySelector('.main-menu');
 const hero = document.querySelector('.hero');
 const burger = document.querySelector('.burger-container');
@@ -40,9 +39,9 @@ const checkShrink = () => {
     }
 }
 
-window.addEventListener('scroll', debounce(checkShrink, 15, true));
+content.addEventListener('scroll', debounce(checkShrink, 15, true));
+
 burger.addEventListener('click', () => {
-    console.log('clicked');
     sliderMenu.classList.toggle('slide-in');
     openIcon.classList.toggle('hide-icon');
     closeIcon.classList.toggle('hide-icon');
