@@ -1,6 +1,13 @@
+"use strict";
 
 const menu = document.querySelector('.main-menu');
 const hero = document.querySelector('.hero');
+const burger = document.querySelector('.burger-container');
+const sliderMenu = document.querySelector('.slider-menu');
+const openIcon = document.querySelector('.burger-menu-open');
+const closeIcon = document.querySelector('.burger-menu-close');
+
+let sliderMenuIsOpen = false
 
 const debounce = (func, delay, immediate) => { // Immediate: should the func run before or after the timeout?
     let timeoutId // Id of the current timout get stored here
@@ -33,4 +40,10 @@ const checkShrink = () => {
 }
 
 window.addEventListener('scroll', debounce(checkShrink, 15, true));
+burger.addEventListener('click', () => {
+    console.log('clicked');
+    sliderMenu.classList.toggle('slide-in');
+    openIcon.classList.toggle('hide-icon');
+    closeIcon.classList.toggle('hide-icon');
+});
 

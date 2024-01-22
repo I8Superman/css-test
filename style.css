@@ -253,8 +253,13 @@ body {
     transform: scale(1.2);
   }
 
-  .burger-menu-icon {
+  .burger-menu-open,
+  .burger-menu-close {
     width: 60%;
+  }
+
+  .hide-icon {
+    display: none;
   }
 }
 
