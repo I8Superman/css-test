@@ -63,7 +63,7 @@ li {
 
 :root {
   /* headers */
-  --h-lg: clamp(3rem, 5.5vw, 5rem) / 100% "DM Serif Display", sans-serif;
+  --h-lg: clamp(2.5rem, 5.5vw, 5rem) / 100% "DM Serif Display", sans-serif;
   --h-m: clamp(2rem, 4.5vw, 3.75rem) / 100% "DM Serif Display", sans-serif;
   --h-sm: clamp(1.5rem, 3vw, 2.175rem) / 100% "DM Serif Display", sans-serif;
   /* sub headers */
