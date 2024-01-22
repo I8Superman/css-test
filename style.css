@@ -47,46 +47,42 @@ li {
   --yellow: #f8dd9f;
 }
 
-/* Fonts */
-:root {
-  /* headers */
-  --h-lg: 5rem/100% "DM Serif Display", sans-serif;
-  --h-m: 3.75rem/100% "DM Serif Display", sans-serif;
-  --h-sm: 2.175rem/100% "DM Serif Display", sans-serif;
-  /* sub headers */
-  --s-h: 600 1.5rem/100% "Poppins", sans-serif;
-  --s-h-sm: 700 1rem/100% "Poppins", sans-serif;
-  /* paragraph text */
-  --p: 400 1rem/120% "Poppins", sans-serif;
-  --p-lg: 300 1.5rem/130% "Poppins", sans-serif;
-  /* other */
-  /* how to capitalize? */
-  --nav-item: 400 1.125rem "Poppins", sans-serif;
-  --btn: 500 1rem "Poppins", sans-serif;
-  --input: 400 1rem/120% "Poppins", sans-serif;
-}
-
 /* Spacing */
 :root {
   /* side and top margins */
-  --s-x-lg: 11.25rem;
-  --s-lg: 7.5rem;
-  --s-m: 5.625rem;
-  --m-l: 1.125rem;
-  --m: 1rem;
-  --sm: 0.75rem;
-  /* 37,1 above large button */
-  /* 31,8 above normal button and after h1 */
-  /* margin bottom efter headers er ikke konsistent */
-
-  /* --sm:
-    --x-sm:
-    --xx-sm: */
+  --sec-pad-full: clamp(2rem, 10.5vw, 11.25rem);
+  --sec-pad-half: clamp(2rem, 5.25vw, 5.625rem);
+  --txt-pad-space: 6vw;
+  --btn-pad-top-bottom: clamp(0.3rem, 1.25vw, 0.65rem);
+  --btn-pad-sides: clamp(0.75rem, 2.5vw, 2rem);
+  --btn-lg-pad-top-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+  --btn-lg-pad-sides: clamp(1rem, 3vw, 2.5rem);
 }
 
-/* PARAGRAPHS & TEXT */
+/* Font styles */
+
+:root {
+  /* headers */
+  --h-lg: clamp(2.5rem, 5.5vw, 5rem) / 100% "DM Serif Display", sans-serif;
+  --h-m: clamp(1.75rem, 4.5vw, 3.75rem) / 100% "DM Serif Display", sans-serif;
+  --h-sm: clamp(1.25rem, 3vw, 2.175rem) / 100% "DM Serif Display", sans-serif;
+  /* sub headers */
+  --s-h: 600 clamp(1.25rem, 2vw, 1.5rem) / 100% "Poppins", sans-serif;
+  --s-h-sm: 700 clamp(1rem, 1.5vw, 1.25rem) / 100% "Poppins", sans-serif;
+  /* paragraph text */
+  --p: 400 clamp(1rem, 1.5vw, 1.25rem) / 120% "Poppins", sans-serif;
+  --p-sm: 400 clamp(0.8rem, 1.25vw, 1rem) / 120% "Poppins", sans-serif;
+  --p-lg: 300 clamp(1.25rem, 2vw, 1.5rem) / 130% "Poppins", sans-serif;
+  /* other */
+  /* how to capitalize? */
+  --nav-item: 400 clamp(1rem, 1vw, 1.125rem) "Poppins", sans-serif;
+  --btn: 500 clamp(0.75rem, 1.25vw, 1rem) "Poppins", sans-serif;
+  --btn-lg: 500 clamp(1rem, 1.5vw, 1.125rem) "Poppins", sans-serif;
+  --input: 400 clamp(1rem, 1.5vw, 1.25rem) / 120% "Poppins", sans-serif;
+}
 
 /* Headers and paragraphs */
+
 .h-lg {
   font: var(--h-lg);
   margin-bottom: 1.75rem;
@@ -115,9 +111,15 @@ li {
 .p {
   font: var(--p);
   margin-bottom: 1rem;
+}
+
+.p-sm {
+  font: var(--p-sm);
+  margin-bottom: 0.8rem;
 
   &.link {
     margin-bottom: 0.5rem;
+    cursor: pointer;
   }
 }
 
@@ -164,6 +166,13 @@ body {
   background-attachment: fixed;
   background-size: cover;
   backdrop-filter: blur(1px) brightness(70%);
+  overflow: hidden;
+}
+
+.content {
+  width: 100vw;
+  height: 100vh;
+  height: 100svh;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -173,7 +182,7 @@ body {
   position: sticky;
   top: 0;
   width: 100vw;
-  max-width: 1500px;
+  max-width: 1600px;
   margin: 0 auto 0 auto;
   z-index: 1;
 }
@@ -181,10 +190,10 @@ body {
 .main-menu {
   height: 12vh;
   min-height: 3.5rem;
-  padding: 0 var(--s-x-lg);
+  padding: 0 var(--sec-pad-full);
   display: flex;
   justify-content: space-between;
-  gap: 10%;
+  gap: clamp(2rem, 6vw, 10rem);
   align-items: center;
   transition: height 0.3s ease;
 
@@ -194,13 +203,22 @@ body {
     transition: padding 0.3s ease;
   }
 
-  .nav-menu {
+  .header-nav-menu {
     flex: 1 1 auto;
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
     & .nav-item {
       color: var(--black);
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -208,23 +226,87 @@ body {
     height: 6vh;
 
     .logo {
-      padding: 0.5rem 0;
+      padding: 0.25rem 0;
     }
   }
+}
 
-  .burger-menu {
-    height: 2.3rem;
+.burger-container {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  position: absolute;
+  bottom: var(--sec-pad-full);
+  right: var(--sec-pad-full);
+  height: clamp(3rem, 10vw, 3.5rem);
+  width: clamp(3rem, 10vw, 3.5rem);
+  background-color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  .burger-menu-icon {
+    width: 60%;
+  }
+}
+
+.slider-menu {
+  position: absolute;
+  height: 98%;
+  width: 95%;
+  @media screen and (min-width: 480px) {
+    height: 100%;
+    width: 45vw;
+  }
+  border-radius: 0 0 3rem 0;
+  background-color: var(--white);
+  top: 0;
+  left: 0;
+  padding: var(--sec-pad-full);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  transform: translateX(-100vw);
+
+  &.slide-in {
+    transform: translateX(0vw);
+  }
+
+  .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .nav-item {
+      color: var(--black);
+      font-size: clamp(2rem, 7vw, 2.5rem);
+      line-height: 180%;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
 /* Main */
-.content {
-  max-width: 1500px;
+.main {
+  max-width: 1600px;
   margin: 0 auto 0 auto;
 }
 
 .container {
-  padding: 11.25rem;
+  padding: var(--sec-pad-full);
 
   &.hero {
     height: 88vh;
@@ -238,8 +320,13 @@ body {
     .section-text {
       align-items: center;
     }
+
     .section-text p {
       width: 60%;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     .section-text .btn-lg {
@@ -251,13 +338,17 @@ body {
     text-align: center;
 
     .section-text {
-      padding: 0 15% 0 15%;
+      padding: 0 calc(2 * var(--txt-pad-space)) 0 calc(2 * var(--txt-pad-space));
     }
   }
 
   &.split {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: 1fr;
+    }
 
     .section-text {
       display: flex;
@@ -275,11 +366,24 @@ body {
       width: 100%;
     }
 
-    & .section-text:first-child {
-      padding-right: 10%;
+    .section-text:first-child {
+      padding-right: var(--txt-pad-space);
     }
-    & .section-text:last-child {
-      padding-left: 10%;
+
+    .section-text:last-child {
+      padding-left: var(--txt-pad-space);
+    }
+
+    @media screen and (max-width: 1023px) {
+      .section-text:first-child {
+        padding-right: 0;
+        padding-bottom: var(--txt-pad-space);
+      }
+
+      .section-text:last-child {
+        padding-left: 0;
+        padding-top: var(--txt-pad-space);
+      }
     }
   }
 
@@ -294,6 +398,11 @@ body {
 
   &.img-links {
     height: 40vw;
+
+    @media screen and (max-width: 600px) {
+      height: 150vw;
+      flex-direction: column;
+    }
   }
 
   .col {
@@ -310,7 +419,7 @@ body {
   & img {
     width: 100%;
     height: auto;
-    filter: blur(0px) saturate(100%);
+    filter: saturate(100%);
     transition: all 0.2s ease-in-out;
   }
 
@@ -324,29 +433,41 @@ body {
 
   &:hover {
     & img {
-      filter: blur(2px) saturate(0%);
+      filter: saturate(0%);
     }
     & h1 {
-      transform: translate(-50%, -50%) scale(1.05);
+      transform: translate(-50%, -50%) scale(1.1);
     }
   }
 }
-
 /* Footer */
 
 footer {
-  max-width: 1500px;
+  max-width: 1600px;
   margin: 0 auto 0 auto;
 }
 .footer {
-  padding: var(--s-lg) var(--s-x-lg) var(--s-lg) var(--s-x-lg);
+  padding: var(--sec-pad-half) var(--sec-pad-full) var(--sec-pad-half)
+    var(--sec-pad-full);
+  gap: 2vw;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap-reverse;
+    /* flex-direction: row; */
+    column-gap: 0;
+    row-gap: 4vw;
+
+    .col {
+      flex: 0 1 50%;
+    }
+  }
 }
 
 .social-links {
   margin-top: 2rem;
 
   & img {
-    width: 12%;
+    width: clamp(1.5rem, 3.5vw, 4rem);
     margin-right: 0.25rem;
     border-radius: 0.25rem;
     cursor: pointer;
@@ -359,7 +480,8 @@ footer {
 .btn-lg {
   border: none;
   border-radius: 0.5rem;
-  padding: 0.65rem 2rem 0.65rem 2rem;
+  padding: var(--btn-pad-top-bottom) var(--btn-pad-sides)
+    var(--btn-pad-top-bottom) var(--btn-pad-sides);
   font: var(--btn);
   text-transform: uppercase;
   cursor: pointer;
@@ -374,7 +496,7 @@ footer {
     );
     background-position: right;
     background-size: 400%;
-    animation: slidebg 0.5s 1;
+    animation: flashbg 0.3s 1;
   }
 
   &.bg-wh:hover {
@@ -386,13 +508,14 @@ footer {
     );
     background-position: right;
     background-size: 400%;
-    animation: slidebg 0.3s 1 ease-in-out;
+    animation: flashbg 0.2s 1;
   }
 }
 
 .btn-lg {
-  font-size: 1.25rem;
-  padding: 0.75rem 2.25rem 0.75rem 2.25rem;
+  font: var(--btn-lg);
+  padding: var(--btn-lg-pad-top-bottom) var(--btn-lg-pad-sides)
+    var(--btn-lg-pad-top-bottom) var(--btn-lg-pad-sides);
 }
 
 .form {
@@ -418,9 +541,8 @@ footer {
 
 /* ANIMATIONS */
 
-/* Button */
-
-@keyframes slidebg {
+/* Button flash */
+@keyframes flashbg {
   to {
     background-position: left;
   }

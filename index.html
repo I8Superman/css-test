@@ -9,150 +9,164 @@
 </head>
 
 <body>
-    <header class="header bg-wh">
-        <div class="main-menu bg-wh">
-            <img class="logo" src="./assets/images/rooster-logo.png" alt="rooster-logo">
-            <nav class="nav-menu">
+    <div class="content">
+        <header class="header bg-wh">
+            <div class="main-menu bg-wh">
+                <img class="logo" src="./assets/images/rooster-logo.png" alt="rooster-logo">
+                <nav class="header-nav-menu">
+                    <a class="nav-item" href="default.asp">Home</a>
+                    <a class="nav-item" href="news.asp">Ydelser</a>
+                    <a class="nav-item" href="contact.asp">Service</a>
+                    <a class="nav-item" href="about.asp">Om os</a>
+                    <a class="nav-item" href="about.asp">Kontakt</a>
+                </nav>
+                <button class="btn wh bg-bl">Book et møde</button>
+            </div>
+        </header>
+        <main class="main">
+            <section class="hero container">
+                <article class="section-text wh">
+                    <h1 class="h-lg">Making it right entirely in Copenhagen since 1997</h1>
+                    <p class="p-lg">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
+                        genuine commitment to
+                        sustainability</p>
+                    <button class="btn-lg bl bg-wh">Book et møde</button>
+                </article>
+            </section>
+            <section class="center bg-ye container">
+                <article class="section-text bl">
+                    <h2 class="h-m">Pursuit of excellence</h2>
+                    <p class="p">The idea of “form follows function,” a principle associated with the modernist design
+                        movement,
+                        was the starting place
+                        for our Voda collection. Its classic geometry and clean finishes unite into an industrial modern
+                        style,
+                        crafted for
+                        Australian living.</p>
+                    <button class="btn wh bg-bl">Kontakt os</button>
+                </article>
+            </section>
+            <section class="split bg-wh container">
+                <img class="section-image" src="./assets/images/splitsektion-1.jpg" alt="kolibri">
+                <article class="section-text bl">
+                    <h2 class="h-m">Modern refinement</h2>
+                    <p class="p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og
+                        øvrige
+                        specialister skaber vi
+                        løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og
+                        samfund
+                        mere
+                        bæredygtige.</p>
+                    <p class="p">Transforming Society Together.</p>
+                    <button class="btn wh bg-bl">Kontakt os</button>
+                </article>
+            </section>
+            <section class="multiple img-links wh">
+                <div class="col img-link ydelser">
+                    <img src="./assets/images/ydelser.jpg" alt="">
+                    <h1 class="h-lg">Ydelser</h1>
+                </div>
+                <div class="col img-link service">
+                    <img src="./assets/images/service.jpg" alt="">
+                    <h1 class="h-lg">Service</h1>
+                </div>
+                <div class="col img-link kontakt">
+                    <img src="./assets/images/kontaktos.jpg" alt="">
+                    <h1 class="h-lg">Kontakt os</h1>
+                </div>
+            </section>
+            <section class="split bg-wh container">
+                <article class="section-text bl">
+                    <h2 class="h-m">Modern refinement</h2>
+                    <p class="p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og
+                        øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens
+                        muligheder og gør vores byer og samfund mere bæredygtige.</p>
+                    <p class="p">Transforming Society Together.</p>
+                    <button class="btn wh bg-bl">Kontakt os</button>
+                </article>
+                <img class="section-image" src="./assets/images/splitsektion-2.jpg" alt="kolibri">
+            </section>
+            <section class="split bg-ye container contact">
+                <article class="section-text bl">
+                    <h2 class="h-m">Get in touch</h2>
+                    <h4 class="s-h">We are here for you and we are here to serve!
+                        <br>How can we help you?
+                    </h4>
+                    <p class="p">If you have any questions, please contact us through this form.</p>
+                    <p class="p">Please complete the following fields:</p>
+                </article>
+                <form class="form" action="submit">
+                    <input type="text" name="name" id="name" placeholder="Dit navn*" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required>
+                    <input type="email" name="email" id="email" placeholder="Den email*">
+                    <textarea name="evt" id="evt" rows="3" placeholder="Eventuel besked"></textarea>
+                    <button type="submit" class="btn wh bg-bl">Kontakt os</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <section class="multiple footer bg-bl wh">
+                <div class="col">
+                    <h3 class="h-sm">Find os her</h3>
+                    <p class="p-sm link">Rooster Fried Chicken <br>
+                        Firmavej 109 <br>
+                        2300 Firmaby</p>
+                    <p class="p-sm link">Tlf.: +45 12 34 56 78 <br>
+                        Mail: info@roosterfried.dk</p>
+                    <br>
+                    <h4 class="s-h-sm">Åbningstider</h4>
+                    <p class="p-sm link">Mandag – fredag: 10.00 – 17.30 <br>
+                        Lørdag: 10.00 – 15.00</p>
+                    <div class="social-links">
+                        <img src="./assets/icons/facebook-ikon-hvid.png" alt="facebook-icon-link">
+                        <img src="./assets/icons/instagram-ikon-hvid.png" alt="instagram-link-icon">
+                        <img src="./assets/icons/pinterest-ikon-hvid.png" alt="pinterest-icon-link">
+                        <img src="./assets/icons/linkedin-ikon-hvid.png" alt="linkedin-ikon-hvid">
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="h-sm">Information</h3>
+                    <p class="p-sm link">Om Rooster</p>
+                    <p class="p-sm link">Kataloger & film</p>
+                    <p class="p-sm link">Kundeguide</p>
+                    <p class="p-sm link">Opskrifter</p>
+                    <p class="p-sm link">Presse</p>
+                    <p class="p-sm link">Karriere</p>
+                </div>
+                <div class="col">
+                    <h3 class="h-sm">About</h3>
+                    <p class="p-sm link">About us</p>
+                    <p class="p-sm link">Careers</p>
+                    <p class="p-sm link">Terms of service</p>
+                    <p class="p-sm link">Refund policy</p>
+                    <p class="p-sm link">Help Center</p>
+                </div>
+                <div class="col">
+                    <h3 class="h-sm">Shop</h3>
+                    <p class="p-sm link">Juices</p>
+                    <p class="p-sm link">Supplements</p>
+                    <p class="p-sm link">Pantry</p>
+                    <p class="p-sm link">Locations</p>
+                    <p class="p-sm link">Order Ahead</p>
+                    <p class="p-sm link">Terms of service</p>
+                    <p class="p-sm link">Aloha</p>
+                </div>
+            </section>
+        </footer>
+        <div class="burger-container">
+            <img src="./assets/icons/burger-menu-ikon-sort.svg" class="burger-menu-icon" alt="">
+        </div>
+        <div class="slider-menu">
+            <nav class="mobile-nav-menu">
                 <a class="nav-item" href="default.asp">Home</a>
                 <a class="nav-item" href="news.asp">Ydelser</a>
                 <a class="nav-item" href="contact.asp">Service</a>
                 <a class="nav-item" href="about.asp">Om os</a>
                 <a class="nav-item" href="about.asp">Kontakt</a>
             </nav>
-            <button class="btn wh bg-bl">Book et møde</button>
-            <!-- <img src="./assets/icons/burger-menu-ikon-sort.svg" class="burger-menu" alt=""> -->
         </div>
-    </header>
-    <main class="content">
-        <section class="hero container">
-            <article class="section-text wh">
-                <h1 class="h-lg">Making it right entirely in Copenhagen since 1997</h1>
-                <p class="p-lg">Every product embodies our spirit of family legacy, traditional craftsmanship, and a
-                    genuine commitment to
-                    sustainability</p>
-                <button class="btn-lg bl bg-wh">Book et møde</button>
-            </article>
-        </section>
-        <section class="center bg-ye container">
-            <article class="section-text bl">
-                <h2 class="h-m">Pursuit of excellence</h2>
-                <p class="p">The idea of “form follows function,” a principle associated with the modernist design
-                    movement,
-                    was the starting place
-                    for our Voda collection. Its classic geometry and clean finishes unite into an industrial modern
-                    style,
-                    crafted for
-                    Australian living.</p>
-                <button class="btn wh bg-bl">Kontakt os</button>
-            </article>
-        </section>
-        <section class="split bg-wh container">
-            <img class="section-image" src="./assets/images/splitsektion-1.jpg" alt="kolibri">
-            <article class="section-text bl">
-                <h2 class="h-m">Modern refinement</h2>
-                <p class="p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og
-                    øvrige
-                    specialister skaber vi
-                    løsninger, der adresserer urbanisering, griber digitaliseringens muligheder og gør vores byer og
-                    samfund
-                    mere
-                    bæredygtige.</p>
-                <p class="p">Transforming Society Together.</p>
-                <button class="btn wh bg-bl">Kontakt os</button>
-            </article>
-        </section>
-        <section class="multiple img-links wh">
-            <div class="col img-link ydelser">
-                <img src="./assets/images/ydelser.jpg" alt="">
-                <h1 class="h-lg">Ydelser</h1>
-            </div>
-            <div class="col img-link service">
-                <img src="./assets/images/service.jpg" alt="">
-                <h1 class="h-lg">Service</h1>
-            </div>
-            <div class="col img-link kontakt">
-                <img src="./assets/images/kontaktos.jpg" alt="">
-                <h1 class="h-lg">Kontakt os</h1>
-            </div>
-        </section>
-        <section class="split bg-wh container">
-            <article class="section-text bl">
-                <h2 class="h-m">Modern refinement</h2>
-                <p class="p">Sammen med vores kunder og den samlede viden fra vores 18.500 arkitekter, ingeniører og
-                    øvrige specialister skaber vi løsninger, der adresserer urbanisering, griber digitaliseringens
-                    muligheder og gør vores byer og samfund mere bæredygtige.</p>
-                <p class="p">Transforming Society Together.</p>
-                <button class="btn wh bg-bl">Kontakt os</button>
-            </article>
-            <img class="section-image" src="./assets/images/splitsektion-2.jpg" alt="kolibri">
-        </section>
-        <section class="split bg-ye container contact">
-            <article class="section-text bl">
-                <h2 class="h-m">Get in touch</h2>
-                <h4 class="s-h">We are here for you and we are here to serve!
-                    <br>How can we help you?
-                </h4>
-                <p class="p">If you have any questions, please contact us through this form.</p>
-                <p class="p">Please complete the following fields:</p>
-            </article>
-            <form class="form" action="submit">
-                <input type="text" name="name" id="name" placeholder="Dit navn*" required>
-                <input type="tel" name="phone" id="phone" placeholder="Telefonnummer" required>
-                <input type="email" name="email" id="email" placeholder="Den email*">
-                <textarea name="evt" id="evt" rows="3" placeholder="Eventuel besked"></textarea>
-                <button type="submit" class="btn wh bg-bl">Kontakt os</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <section class="multiple footer bg-bl wh">
-            <div class="col">
-                <h3 class="h-sm">Find os her</h3>
-                <p class="p">Rooster Fried Chicken <br>
-                    Firmavej 109 <br>
-                    2300 Firmaby</p>
-                <p class="p">Tlf.: +45 12 34 56 78 <br>
-                    Mail: info@roosterfried.dk</p>
-                <h4 class="s-h-sm">Åbningstider:</h4>
-                <p class="p">Mandag – fredag: 10.00 – 17.30 <br>
-                    Lørdag: 10.00 – 15.00</p>
-                <div class="social-links">
-                    <img src="./assets/icons/facebook-ikon-hvid.png" alt="facebook-icon-link">
-                    <img src="./assets/icons/instagram-ikon-hvid.png" alt="instagram-link-icon">
-                    <img src="./assets/icons/pinterest-ikon-hvid.png" alt="pinterest-icon-link">
-                    <img src="./assets/icons/linkedin-ikon-hvid.png" alt="linkedin-ikon-hvid">
-                </div>
-            </div>
-            <div class="col">
-                <h3 class="h-sm">Information</h3>
-                <p class="p link">Om Rooster</p>
-                <p class="p link">Kataloger & film</p>
-                <p class="p link">Kundeguide</p>
-                <p class="p link">Opskrifter</p>
-                <p class="p link">Presse</p>
-                <p class="p link">Karriere</p>
-            </div>
-            <div class="col">
-                <h3 class="h-sm">About</h3>
-                <p class="p link">About us</p>
-                <p class="p link">Careers</p>
-                <p class="p link">Terms of service</p>
-                <p class="p link">Refund policy</p>
-                <p class="p link">Help Center</p>
-            </div>
-            <div class="col">
-                <h3 class="h-sm">Shop</h3>
-                <p class="p link">Juices</p>
-                <p class="p link">Supplements</p>
-                <p class="p link">Pantry</p>
-                <p class="p link">Locations</p>
-                <p class="p link">Order Ahead</p>
-                <p class="p link">Terms of service</p>
-                <p class="p link">Aloha</p>
-            </div>
-        </section>
-    </footer>
-    <script src="./script.js"></script>
+        <script src="./script.js"></script>
+    </div>
 </body>
 
 </html>
