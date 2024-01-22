@@ -491,7 +491,7 @@ footer {
   margin-top: 2rem;
 
   & img {
-    width: clamp(1.5rem, 3.5vw, 4rem);
+    width: clamp(1.5rem, 3.5vw, 2.75rem);
     margin-right: 0.25rem;
     border-radius: 0.25rem;
     cursor: pointer;
