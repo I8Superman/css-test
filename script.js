@@ -4,6 +4,7 @@ const menu = document.querySelector('.main-menu');
 const hero = document.querySelector('.hero');
 const burger = document.querySelector('.burger-container');
 const sliderMenu = document.querySelector('.slider-menu');
+const navLinks = document.querySelectorAll('.mobile-nav-item')
 const openIcon = document.querySelector('.burger-menu-open');
 const closeIcon = document.querySelector('.burger-menu-close');
 
@@ -46,4 +47,13 @@ burger.addEventListener('click', () => {
     openIcon.classList.toggle('hide-icon');
     closeIcon.classList.toggle('hide-icon');
 });
+
+navLinks.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        sliderMenu.classList.toggle('slide-in');
+        openIcon.classList.toggle('hide-icon');
+        closeIcon.classList.toggle('hide-icon');
+    })
+})
 

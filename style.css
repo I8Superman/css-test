@@ -191,6 +191,9 @@ body {
   height: 12vh;
   min-height: 3.5rem;
   padding: 0 var(--sec-pad-full);
+  @media screen and (max-width: 480px) {
+    padding: 0 2rem;
+  }
   display: flex;
   justify-content: space-between;
   gap: clamp(2rem, 6vw, 10rem);
@@ -291,7 +294,7 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    .nav-item {
+    .mobile-nav-item {
       color: var(--black);
       font-size: clamp(2rem, 7vw, 2.5rem);
       line-height: 180%;
@@ -312,9 +315,13 @@ body {
 
 .container {
   padding: var(--sec-pad-full);
+  @media screen and (max-width: 480px) {
+    padding: 2rem;
+  }
 
   &.hero {
     height: 88vh;
+    height: 88svh;
     background-image: url("./assets/images/topbillede.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -454,6 +461,10 @@ footer {
 .footer {
   padding: var(--sec-pad-half) var(--sec-pad-full) var(--sec-pad-half)
     var(--sec-pad-full);
+  @media screen and (max-width: 480px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   gap: 2vw;
 
   @media screen and (max-width: 767px) {
