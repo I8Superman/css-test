@@ -354,10 +354,9 @@ body {
     text-align: center;
 
     .section-text {
-      padding: 0 calc(2 * var(--txt-pad-space)) 0 calc(2 * var(--txt-pad-space));
-
-      @media screen and (max-width: 480px) {
-        padding: 0;
+      @media screen and (min-width: 768px) {
+        padding: 0 calc(2 * var(--txt-pad-space)) 0
+          calc(2 * var(--txt-pad-space));
       }
     }
   }
